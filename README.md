@@ -26,7 +26,7 @@ pipx install copier
 pipx install pre-commit
 pipx ensurepath
 # Clone this template and answer its questions
-copier copy --UNSAFE https://github.com/OCA/oca-addons-repo-template.git some-repo
+copier copy --UNSAFE https://github.com/The-O-Team/oca-addons-repo-template.git some-repo
 # Commit that
 cd some-repo
 git add .
