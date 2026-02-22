@@ -322,7 +322,11 @@ repos:
           - --rcfile=.pylintrc
           - --exit-zero
         verbose: true
+        # O-Team: exclude terraform
+        exclude: (^|/)terraform/
       - id: pylint_odoo
         args:
           - --rcfile=.pylintrc-mandatory
+        # O-Team: exclude terraform
+        exclude: (^|/)terraform/
 {%- endif %}
