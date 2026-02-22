@@ -86,3 +86,115 @@ docs/_build/
 
 # OCA rules
 !static/lib/
+
+# O-team setup
+### Terraform template
+# Local .terraform directories
+**/.terraform/*
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
+
+# Crash log files
+crash.log
+crash.*.log
+
+# Exclude all .tfvars files, which are likely to contain sensitive data
+*.tfvars
+*.tfvars.json
+
+# Exception: Allow specific environment tfvars files to be tracked
+!terraform/instances/staging.tfvars
+!terraform/instances/production.tfvars
+
+# Ignore override files as they are usually used to override resources locally
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Ignore CLI configuration files
+.terraformrc
+terraform.rc
+
+# Ignore lock files (comment out if you want to track provider versions)
+.terraform.lock.hcl
+
+### Ansible template
+# Ansible vault password files (NEVER commit these!)
+.vault_pass
+.vault_password
+*vault_pass*
+*vault_password*
+ansible/.vault_pass
+ansible/.vault_password
+
+# Retry files (created when playbooks fail)
+*.retry
+
+# Galaxy installation files
+ansible/roles/*/
+ansible/collections/
+!ansible/roles/.gitkeep
+!ansible/collections/.gitkeep
+
+# Temporary files and backups
+ansible/**/*~
+ansible/**/*.swp
+ansible/**/*.swo
+ansible/**/*.bak
+ansible/**/.*.sw?
+
+# SSH known_hosts files
+ansible/ssh_known_hosts
+ansible/.ssh/
+
+# Fact caching (if using fact caching)
+ansible/facts/
+ansible/.ansible_facts/
+
+# Ansible logs
+ansible/*.log
+ansible/logs/
+
+# Python virtual environments in ansible directory
+ansible/.venv/
+ansible/venv/
+ansible/env/
+
+# Downloaded/generated files
+ansible/downloads/
+ansible/tmp/
+ansible/.tmp/
+
+# OS-specific files
+ansible/.DS_Store
+ansible/Thumbs.db
+
+### Docker & Secrets
+# Environment files (NEVER commit these - they contain sensitive data!)
+.env
+.env.*
+!.env.example
+
+# Docker secrets directory (NEVER commit passwords!)
+secrets/
+*.secret
+*.key
+*.pem
+
+# Docker volumes and data
+docker-compose.override.yml
+.docker/
+
+# Odoo filestore and data (local development)
+filestore/
+sessions/
+*.filestore
+
+# PostgreSQL dumps and backups
+*.sql
+*.dump
+*.backup
+backups/
