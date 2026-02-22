@@ -26,6 +26,9 @@ exclude = ["setup/*"]
 [format]
 exclude = ["setup/*"]
 
+# O-Team: enable docstring formatting
+docstring-code-format = true
+
 [{% if odoo_version >= 18 %}lint.{% endif %}per-file-ignores]
 "__init__.py" = ["F401", "I001"]  # ignore unused and unsorted imports in __init__.py
 "__manifest__.py" = ["B018"]  # useless expression
